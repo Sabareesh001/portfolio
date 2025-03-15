@@ -1,0 +1,22 @@
+import { createTheme } from "@mui/material";
+import { darkMode } from "./darkMode";
+import { lightMode } from "./lightMode";
+const getTheme = (mode)=>{
+  const theme = createTheme(
+    {...(mode=='night'?darkMode:lightMode), 
+      gap:{
+      menus:'1rem'
+      },
+      border:{
+        container:'0.03125rem'
+      },
+      radius:{
+        container:'0.5rem'
+      }
+  }
+  );
+
+  return theme;
+}
+
+export {getTheme};
