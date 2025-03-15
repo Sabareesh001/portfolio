@@ -1,4 +1,4 @@
-import { Box, Button, styled, useTheme } from "@mui/material";
+import { Box, Button, Popper, styled, useTheme } from "@mui/material";
 import { Toggle } from "../../atoms/toggle";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../store/contextProvider";
@@ -21,33 +21,27 @@ const Menus = styled(Box)(({theme})=>({
     display:'flex',
     alignItems:'center',
     gap:theme.gap.menus,
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('md')]:{
         display:'none'
     }
 }))
 
-const PopUp = styled(Box)(({theme})=>({
+const PopUp = styled(Popper)(({theme})=>({
     display:'flex',
     flexDirection:'column',
-    position:'absolute',
-    right:'0',
-    top:'4rem',
-    margin:'1rem',
-    alignItems:'center',
-    padding:'1rem',
-    [theme.breakpoints.up('sm')]:{
+    [theme.breakpoints.up('md')]:{
         display:'none',
     },
     gap:theme.gap.menus,
     padding:'1rem 1.6rem',
     border:`solid ${theme.palette.secondary.border} ${theme.border.container}`,
+    backgroundColor:theme.palette.primary.back,
     borderRadius:theme.radius.container,
-    backgroundColor:theme.palette.primary.back
 }))
 
 const MobileNavMenu = styled(Box)(({theme})=>({
     
-      [theme.breakpoints.up('sm')]:{
+      [theme.breakpoints.up('md')]:{
         display:'none'
       }
 }))
@@ -65,28 +59,30 @@ const ModeToggle = ()=>{
             width:'2.5rem',
             position:'relative',
             fontSize:theme.fontSize.button,
-            color:theme.palette.secondary.main,
-            backgroundColor:theme.palette.primary.main,
-            
+            color:theme.palette.text.secondary,
+            backgroundColor:theme.palette.text.primary,
             '&:hover':{
                 color:theme.palette.primary.main,
             },
+            [theme.breakpoints.down(400)]:{
+                 display:'none'
+            },
             borderRadius:'100rem'
         }} onClick={changeMode}>
-         {data.mode=='night'?<WbSunny fontSize="inherit"/>:<Bedtime fontSize="inherit"/>}
+         {data.mode=='night'?<WbSunny color="inherit" fontSize="inherit"/>:<Bedtime color="inherit" fontSize="inherit"/>}
         </Toggle>
     )
 }
 
 const MoreButton = styled(Button)(({theme})=>({
-    [theme.breakpoints.up('sm')]:{
+    [theme.breakpoints.up('md')]:{
         display:'none',
     },
 }))
 
 const MoreIcon = styled(()=>(<MoreVert/>))(({theme})=>({
     color:theme.palette.text.primary,
-    [theme.breakpoints.up('sm')]:{
+    [theme.breakpoints.up('md')]:{
         display:'none',
     },
 }))
