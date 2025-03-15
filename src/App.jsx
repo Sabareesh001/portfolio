@@ -3,13 +3,13 @@ import './App.css'
 import { useTheme } from '@emotion/react'
 import { Background } from './atoms/background/background';
 import { Test } from './pages/test/test';
+import { ContextProvider } from './store/contextProvider';
 function App() {
-  const theme =  useTheme();
   return (
     <>
-    <Background>
-      <Test/>
-    </Background>
+        <Background>
+          <Test/>
+        </Background>
     </>
   )
 }

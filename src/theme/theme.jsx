@@ -1,12 +1,22 @@
 import { createTheme } from "@mui/material";
-
-const theme = createTheme({
-    palette: {
-      primary: {
-        main: "#006769",
-        light:"#9DDE8B",
-        dark:"006769"
+import { darkMode } from "./darkMode";
+import { lightMode } from "./lightMode";
+const getTheme = (mode)=>{
+  const theme = createTheme(
+    {...(mode=='night'?darkMode:lightMode), 
+      gap:{
+      menus:'1rem'
       },
-    },
-  });
-export {theme};
+      border:{
+        container:'0.03125rem'
+      },
+      radius:{
+        container:'0.5rem'
+      }
+  }
+  );
+
+  return theme;
+}
+
+export {getTheme};
