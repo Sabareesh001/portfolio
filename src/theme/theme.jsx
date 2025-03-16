@@ -4,14 +4,22 @@ import { lightMode } from "./lightMode";
 const getTheme = (mode)=>{
   const theme = createTheme(
     {...(mode=='night'?darkMode:lightMode), 
+      typography:{
+        fontFamily:'monospace',
+      },
+      fontSize:{
+        heading : '2rem',
+        button : '1rem'
+      },
       gap:{
       menus:'1rem'
       },
       border:{
-        container:'0.03125rem'
+        container:'0.03125rem',
+        box:'0.1rem'
       },
       radius:{
-        container:'0.5rem'
+        container:'0.5rem',
       }
   }
   );

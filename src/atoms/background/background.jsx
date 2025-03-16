@@ -4,7 +4,8 @@ const Background = styled(Box)(({theme})=>(
    { 
      backgroundColor:theme.palette.secondary.main,
      height:"100vh",
-     width:"100vw"
+     width:"100vw",
+     overflow:'scroll',
    }
 ))
 
