@@ -1,13 +1,13 @@
-import { Box } from '@mui/material'
+
 import './App.css'
-import { useTheme } from '@emotion/react'
 import { Background } from './atoms/background/background';
-import { Test } from './pages/test/test';
-import { ContextProvider } from './store/contextProvider';
+import { Test } from './sections/test';
+import { Navbar } from './components/navbar';
 function App() {
   return (
     <>
         <Background>
+          <Navbar/>
           <Test/>
         </Background>
     </>

@@ -34,7 +34,9 @@ const Navbar  = ()=>{
           }      
           {
             socials.map((data)=>(
-              <Button  href={data.link}>
+              <Button sx={{
+                fontSize:'2rem'
+              }}  href={data.link}>
                 {data.icon}
               </Button>
             ))
