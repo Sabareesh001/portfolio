@@ -34,6 +34,7 @@ const PopUp = styled(Popper)(({theme})=>({
     [theme.breakpoints.up('md')]:{
         display:'none',
     },
+    zIndex:1000,
     gap:theme.gap.menus,
     padding:'1rem 1.6rem',
     border:`solid ${theme.palette.secondary.border} ${theme.border.container}`,
@@ -45,7 +46,7 @@ const MobileNavMenu = styled(Box)(({theme})=>({
     
       [theme.breakpoints.up('md')]:{
         display:'none'
-      }
+      },
 }))
 
 const ModeToggle = ()=>{
