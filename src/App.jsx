@@ -3,12 +3,13 @@ import './App.css'
 import { Background } from './atoms/background/background';
 import { Test } from './sections/test';
 import { Navbar } from './components/navbar';
+import { Hero } from './sections/hero';
 function App() {
   return (
     <>
         <Background>
-          <Navbar/>
-          <Test/>
+          <Navbar />
+          <Hero/>
         </Background>
     </>
   )
