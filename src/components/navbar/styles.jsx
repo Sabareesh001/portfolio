@@ -7,7 +7,9 @@ const NavbarBox = styled(Box)(({theme})=>({
     width:"100%",
     padding:"1rem 0rem",
     backgroundColor:theme.palette.primary.back,
-    borderBottom:`solid ${theme.palette.secondary.border} ${theme.border.container}`
+    borderBottom:`solid ${theme.palette.secondary.border} ${theme.border.container}`,
+    position:'fixed',
+    zIndex:999
 }))
 
 const NavContent = styled(Box)(({theme})=>({
