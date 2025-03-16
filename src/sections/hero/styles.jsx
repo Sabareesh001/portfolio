@@ -7,7 +7,8 @@ const HeroContainer = styled(Grid2)(({theme})=>({
        justifyContent:'center',
        marginRight:'3rem',
        marginLeft:'3rem',
-       gap:'3rem'
+       gap:'3rem',
+       paddingTop:'6rem'
 }))
 
 
