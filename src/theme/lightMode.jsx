@@ -2,7 +2,7 @@ const lightMode = {
     palette:{
         primary: {
             main: "#0695ff",
-            back:'ffff'
+            back:'#ffffff',
           },
           background:{
             
@@ -13,15 +13,9 @@ const lightMode = {
           },
           text:{
             primary:"#000000",
+            secondary:"#ffffff"
           },  
     },
-    typography:{
-      fontFamily:'monospace',
-    },
-    fontSize:{
-      heading : '1.5rem',
-      button : '1rem'
-    }
 }
 
 export {lightMode};

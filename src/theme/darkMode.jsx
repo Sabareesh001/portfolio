@@ -12,16 +12,11 @@ const darkMode ={
           border:'#292c32'
         },
         text:{
-          primary:"#ffff",
+          primary:"#ffffff",
+          secondary:"#000000"
         },  
   },
-  typography:{
-    fontFamily:'monospace',
-  },
-  fontSize:{
-    heading : '1.5rem',
-    button : '1rem'
-  }
+ 
 }
 
 export {darkMode};
