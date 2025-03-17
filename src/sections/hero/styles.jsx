@@ -5,8 +5,6 @@ const HeroContainer = styled(Grid2)(({theme})=>({
        alignContent:'center',
        gridTemplateColumns: 'repeat(auto-fill, minmax(33%, 1fr))',
        justifyContent:'center',
-       marginRight:'1rem',
-       marginLeft:'1rem',
        gap:'3rem',
        paddingTop:'10rem'
 }))
