@@ -9,7 +9,7 @@ const lightMode = {
           },
           secondary:{
             main : "#ffff",
-            border:'#dadce0'
+            border:'rgba(6,149,255,0.43384678089985995)'
           },
           text:{
             primary:"#000000",
