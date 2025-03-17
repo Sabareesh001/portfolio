@@ -5,10 +5,11 @@ const getTheme = (mode)=>{
   const theme = createTheme(
     {...(mode=='night'?darkMode:lightMode), 
       typography:{
-        fontFamily:'monospace',
+        fontFamily:'Stfu',
       },
       fontSize:{
         heading : '2rem',
+        subHeading : '1rem',
         button : '1rem'
       },
       gap:{
@@ -20,8 +21,8 @@ const getTheme = (mode)=>{
       },
       radius:{
         container:'0.5rem',
-      }
-  }
+      },
+}
   );
 
   return theme;

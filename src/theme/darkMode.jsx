@@ -9,7 +9,7 @@ const darkMode ={
         },
         secondary:{
           main : "#101218",
-          border:'#292c32'
+          border:'rgba(6,149,255,0.43384678089985995) '
         },
         text:{
           primary:"#ffffff",

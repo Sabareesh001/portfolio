@@ -67,7 +67,7 @@ const ModeToggle = ()=>{
             '&:hover':{
                 color:theme.palette.primary.main,
             },
-            [theme.breakpoints.down(400)]:{
+            [theme.breakpoints.down(300)]:{
                  display:'none'
             },
             borderRadius:'100rem'
@@ -89,5 +89,7 @@ const MoreIcon = styled(()=>(<MoreVert/>))(({theme})=>({
         display:'none',
     },
 }))
+
+
 
 export {NavbarBox,NavContent,Menus,ModeToggle,MoreIcon,PopUp,MoreButton,MobileNavMenu};
