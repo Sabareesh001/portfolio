@@ -1,10 +1,10 @@
-import { Box, Button, ClickAwayListener, Icon, Typography } from "@mui/material";
+import {Button, ClickAwayListener } from "@mui/material";
 import { Menus, MobileNavMenu, ModeToggle, MoreButton, MoreIcon, NavbarBox, NavContent, PopUp } from "./styles";
-import { Heading } from "../../atoms/typography";
 import { MenuButton } from "../../atoms/menuButton";
 import { navMenus, socials } from "./data";
 import { useRef, useState } from "react";
 import { Signature } from "../../assets/signature";
+import { VerticalDivider } from "../../atoms/divider";
 
 const Navbar  = ()=>{
     const [isPopMenu,setPopMenu] = useState(false);
@@ -12,7 +12,6 @@ const Navbar  = ()=>{
       setPopMenu((prev)=>(!prev))
     }
     const popRef = useRef();
-    const moreIconRef = useRef();
     return(
       <NavbarBox>
          <NavContent>
@@ -31,8 +30,9 @@ const Navbar  = ()=>{
                 {data.name}
               </MenuButton> 
             ))
-          }      
-          {
+            }
+            <VerticalDivider/>
+            {
             socials.map((data)=>(
               <Button sx={{
                 fontSize:'2rem'

@@ -3,3 +3,9 @@ body{
   margin: 0;
   height: max-content;
 }
+
+@font-face{
+  font-family: "Stfu";
+  src:local("Stfu-Regular"),
+  url('./assets/fonts/sfui/SFUIText-Regular.ttf') 
+}
