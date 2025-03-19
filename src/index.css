@@ -2,6 +2,10 @@ body{
   box-sizing: border-box;
   margin: 0;
   height: max-content;
+
+}
+*{
+  scrollbar-width:none;
 }
 
 @font-face{

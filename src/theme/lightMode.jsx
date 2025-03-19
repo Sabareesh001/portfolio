@@ -3,6 +3,7 @@ const lightMode = {
         primary: {
             main: "#0695ff",
             back:'#ffffff',
+            shadow:'#ffffff',
           },
           background:{
             

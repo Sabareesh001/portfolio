@@ -1,4 +1,4 @@
-import {Button } from "@mui/material";
+import {Button, Grow, Zoom } from "@mui/material";
 import { socials } from "../../components/navbar/data";
 import { HeroContainer, HeroSec1, HeroSection, HeroSocials, HeroTechSec, Name, NameAndRole, ProfilePic, Role, SkillBox, SkillsContainer, SkillSection, StackContainer, StackSection } from "./styles";
 import { StyledButton } from "../../atoms/button";
@@ -9,6 +9,8 @@ import { Heading, SubHeading } from "../../atoms/typography";
 const Hero = ()=>{
     return(
         <HeroContainer container >
+            <Grow in={true} timeout={900} >
+
             <HeroSection item>
                 <HeroSec1>
                     <ProfilePic src="https://avatars.githubusercontent.com/sabareesh001" />
@@ -28,7 +30,9 @@ const Hero = ()=>{
             socials.map((data)=>(
               <Button sx={{
                 fontSize:'2rem'
-              }} href={data.link}>
+              }}
+              target="_blank"
+              href={data.link}>
                 {data.icon}
               </Button>
             ))
@@ -40,12 +44,16 @@ const Hero = ()=>{
                     </HeroTechSec>
                 </HeroSec1>
             </HeroSection>
+                            
+            </Grow>
+           
             <HeroSection>
                 <StackSection>
 
                 <Heading>
                     Stacks worked on
                 </Heading>
+                <Zoom in={true} timeout={600}>
                 <StackContainer>
                 {
                    stackList.map((stack)=>(
@@ -58,9 +66,12 @@ const Hero = ()=>{
                 )) 
                 }
                </StackContainer>
-               
+                                   
+               </Zoom>
                </StackSection>
             </HeroSection>
+            <Grow in={true} timeout={900}>
+
             <HeroSection>
                 <SkillSection>
                 <Heading align="center">
@@ -82,6 +93,8 @@ const Hero = ()=>{
                 }
                 </SkillSection>
             </HeroSection>
+                            
+            </Grow>
         </HeroContainer>
     )
 }
