@@ -12,7 +12,7 @@ const ProjectCard = styled(Card)(({theme})=>({
     border:`solid ${theme.palette.primary.main} ${theme.border.box}`,
     background: `${theme.palette.primary.back}`,
     padding:'2rem 2rem',
-    minWidth:'20rem',
+    minWidth:'15rem',
     maxWidth:'40rem',
     background: `linear-gradient(90deg, ${theme.palette.primary.back} 0%, ${theme.palette.primary.main} 500%)`,
 }))
