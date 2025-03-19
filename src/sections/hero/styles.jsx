@@ -6,7 +6,10 @@ const HeroContainer = styled(Grid2)(({theme})=>({
        gridTemplateColumns: 'repeat(auto-fill, minmax(33%, 1fr))',
        justifyContent:'center',
        gap:'3rem',
-       paddingTop:'10rem'
+       paddingTop:'10rem',
+       [theme.breakpoints.down('sm')]:{
+           paddingTop:'7rem'
+       }
 }))
 
 
@@ -100,7 +103,7 @@ const ProfilePic = styled('img')(({theme})=>({
       height:"15rem",
       width:'15rem',
       borderRadius:'50rem',
-      border:`solid ${theme.palette.primary.main}`,
+      border:`solid ${theme.palette.primary.main} ${theme.border.box}`,
       '&:hover':{
         height:'15.5rem',
         width:'15.5rem',

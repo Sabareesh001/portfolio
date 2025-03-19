@@ -2,7 +2,8 @@ const darkMode ={
   palette:{
       primary: {
           main: "#0695ff",
-          back:"#101218"
+          back:"#101218",
+          shadow : '#00121f'
         },
         background:{
           
